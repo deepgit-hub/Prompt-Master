@@ -1,0 +1,632 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f7fb;
+
+    color: #172033;
+}
+
+
+.app {
+
+    max-width: 1150px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.topbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 26px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(20,40,80,0.06);
+}
+
+
+.eyebrow {
+
+    margin: 0 0 5px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    color: #52627a;
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-size: 32px;
+}
+
+
+.timer-box {
+
+    text-align: right;
+}
+
+
+.timer-box span {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #64748b;
+}
+
+
+.timer-box strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 36px;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+/* =========================================
+   SCREENS
+========================================= */
+
+.screen {
+
+    display: none;
+
+    flex: 1;
+}
+
+
+.screen.active {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 0;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+
+    width: 100%;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(20,40,80,0.08);
+}
+
+
+/* =========================================
+   START SCREEN
+========================================= */
+
+.setup-card {
+
+    max-width: 850px;
+
+    padding: 42px;
+}
+
+
+.setup-card h2 {
+
+    margin: 0 0 10px;
+
+    font-size: 30px;
+}
+
+
+.muted {
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RULES
+========================================= */
+
+.rules {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 14px;
+
+    margin: 30px 0;
+}
+
+
+.rules div {
+
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border-radius: 14px;
+
+    border: 1px solid #e8edf4;
+}
+
+
+.rules b {
+
+    display: block;
+
+    font-size: 12px;
+
+    color: #52627a;
+
+    letter-spacing: 1px;
+}
+
+
+.rules span {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin: 8px 0;
+}
+
+
+.rules small {
+
+    color: #64748b;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 15px 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.primary {
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    background: #172033;
+
+    color: white;
+}
+
+
+.primary:hover {
+
+    background: #2d3a50;
+}
+
+
+/* =========================================
+   CHALLENGE
+========================================= */
+
+#challengeScreen {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    padding-top: 35px;
+}
+
+
+.progress-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #64748b;
+}
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.question-card {
+
+    padding: 38px;
+}
+
+
+.question-meta {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.question-meta span {
+
+    padding: 8px 13px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+#roundBadge {
+
+    background: #172033;
+
+    color: white;
+}
+
+
+#roundType {
+
+    background: #eef2f7;
+
+    color: #52627a;
+}
+
+
+.question-card h2 {
+
+    margin: 0 0 16px;
+
+    font-size: 30px;
+}
+
+
+.question-card > p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #334155;
+}
+
+
+/* =========================================
+   DATA BOX
+========================================= */
+
+.data-box {
+
+    margin: 22px 0;
+
+    padding: 22px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    white-space: pre-line;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+.hidden {
+
+    display: none;
+}
+
+
+/* =========================================
+   TASK BOX
+========================================= */
+
+.task-box {
+
+    margin-top: 28px;
+
+    padding: 22px;
+
+    background: #f8fafc;
+
+    border-left: 4px solid #172033;
+}
+
+
+.task-box strong {
+
+    font-size: 14px;
+}
+
+
+.task-box p {
+
+    margin: 9px 0 0;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TIP
+========================================= */
+
+.tip {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #fff8e8;
+
+    border-radius: 10px;
+
+    color: #765b19;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FINISHED SCREEN
+========================================= */
+
+.finished-card {
+
+    max-width: 700px;
+
+    padding: 60px 45px;
+
+    text-align: center;
+}
+
+
+.check {
+
+    width: 76px;
+
+    height: 76px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: #172033;
+
+    color: white;
+
+    font-size: 40px;
+}
+
+
+.finished-card h2 {
+
+    margin: 0 0 15px;
+
+    font-size: 35px;
+}
+
+
+.all-the-best {
+
+    margin-top: 28px;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+.wait-results {
+
+    margin-top: 12px;
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ORGANIZERS
+========================================= */
+
+.organizers {
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+
+.organizers-title {
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #64748b;
+}
+
+
+.organizer-names {
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    padding: 15px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .app {
+
+        padding: 12px;
+    }
+
+
+    .rules {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .topbar {
+
+        padding: 16px;
+    }
+
+
+    h1 {
+
+        font-size: 25px;
+    }
+
+
+    .timer-box strong {
+
+        font-size: 27px;
+    }
+
+
+    .setup-card,
+    .question-card,
+    .finished-card {
+
+        padding: 25px;
+    }
+
+}
