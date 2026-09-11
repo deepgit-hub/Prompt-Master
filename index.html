@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prompt Master | AI Prompting Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header class="topbar">
+
+        <div>
+
+            <p class="eyebrow">
+                AI PROMPTING CHALLENGE
+            </p>
+
+            <h1>
+                Prompt Master
+            </h1>
+
+        </div>
+
+
+        <div class="timer-box">
+
+            <span>
+                TIME REMAINING
+            </span>
+
+            <strong id="timer">
+                15:00
+            </strong>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         START SCREEN
+    ========================================= -->
+
+    <section
+        id="setupScreen"
+        class="screen active"
+    >
+
+        <div class="card setup-card">
+
+            <h2>
+                Ready to Begin?
+            </h2>
+
+
+            <p class="muted">
+
+                Welcome to Prompt Master.
+                Participants will solve three
+                progressively challenging AI
+                prompting problems.
+
+            </p>
+
+
+
+            <!-- ROUND DETAILS -->
+
+            <div class="rules">
+
+
+                <div>
+
+                    <b>
+                        ROUND 1
+                    </b>
+
+                    <span>
+                        Basic Prompting
+                    </span>
+
+                    <small>
+                        0:00 – 2:00
+                        <br>
+                        2 Minutes
+                    </small>
+
+                </div>
+
+
+
+                <div>
+
+                    <b>
+                        ROUND 2
+                    </b>
+
+                    <span>
+                        Analyze & Extract
+                    </span>
+
+                    <small>
+                        2:00 – 5:00
+                        <br>
+                        3 Minutes
+                    </small>
+
+                </div>
+
+
+
+                <div>
+
+                    <b>
+                        ROUND 3
+                    </b>
+
+                    <span>
+                        Real-World Problem Solving
+                    </span>
+
+                    <small>
+                        5:00 – 15:00
+                        <br>
+                        10 Minutes
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- START -->
+
+            <button
+                id="startBtn"
+                class="primary"
+            >
+                START CHALLENGE
+            </button>
+
+
+            <p class="note">
+
+                Record your prompts and AI responses
+                in the provided Word document.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CHALLENGE SCREEN
+    ========================================= -->
+
+    <section
+        id="challengeScreen"
+        class="screen"
+    >
+
+
+        <!-- ROUND STATUS -->
+
+        <div class="progress-row">
+
+            <div id="roundLabel">
+                ROUND 1
+            </div>
+
+            <div id="stageText">
+                Basic Prompting
+            </div>
+
+        </div>
+
+
+
+        <!-- QUESTION CARD -->
+
+        <div
+            id="questionCard"
+            class="card question-card"
+        >
+
+
+            <!-- BADGES -->
+
+            <div class="question-meta">
+
+                <span id="roundBadge">
+                    ROUND 1
+                </span>
+
+                <span id="roundType">
+                    Basic Prompting
+                </span>
+
+            </div>
+
+
+
+            <!-- TITLE -->
+
+            <h2 id="questionTitle">
+                Smart Energy Calculation
+            </h2>
+
+
+
+            <!-- QUESTION -->
+
+            <p id="questionText">
+
+                A college computer lab contains
+                30 computers. Each computer
+                consumes an average of 120 watts
+                while operating. The lab operates
+                for 8 hours per day and 26 days
+                per month.
+
+            </p>
+
+
+
+            <!-- DATA -->
+
+            <div
+                id="dataBox"
+                class="data-box hidden"
+            ></div>
+
+
+
+            <!-- TASK -->
+
+            <div class="task-box">
+
+                <strong>
+                    YOUR TASK
+                </strong>
+
+                <p id="taskText">
+
+                    Create one well-structured prompt
+                    that asks an AI to calculate the
+                    monthly electricity consumption
+                    and total electricity cost while
+                    showing formulas, assumptions,
+                    calculations and results in a
+                    clear table.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- TIP -->
+
+            <div class="tip">
+
+                ⚠️ Your task is to create the prompt,
+                not manually solve the problem.
+                The quality of your prompt will be
+                evaluated.
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         FINISHED SCREEN
+    ========================================= -->
+
+    <section
+        id="finishedScreen"
+        class="screen"
+    >
+
+        <div class="card finished-card">
+
+
+            <div class="check">
+                ✓
+            </div>
+
+
+            <h2>
+                Challenge Completed!
+            </h2>
+
+
+            <p class="all-the-best">
+                🎯 All the Best!
+            </p>
+
+
+            <p class="wait-results">
+
+                Thank you for participating in
+                <strong>Prompt Master</strong>.
+
+                <br><br>
+
+                Your challenge has been completed.
+
+                <br><br>
+
+                <strong>
+                    Please wait for the results.
+                </strong>
+
+            </p>
+
+
+
+            <!-- ORGANIZERS -->
+
+            <div class="organizers">
+
+                <div class="organizers-title">
+                    ORGANIZED BY
+                </div>
+
+
+                <div class="organizer-names">
+
+                    Deepak L
+
+                    <br>
+
+                    Prompt Master Organizing Team
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        Prompt Master • AI Prompting Challenge
+
+    </footer>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
