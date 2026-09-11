@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,223 +13,292 @@
 
 <body>
 
-<div class="app">
+    <div class="app">
 
-    <!-- ================= HEADER ================= -->
-    <header class="header">
+        <!-- ================= HEADER ================= -->
 
-        <div class="brand">
-            <h1>AI PROMPTING CHALLENGE</h1>
-            <p>Prompt Master</p>
-        </div>
+        <header class="header">
 
-        <div class="timer-box">
-            <span>TIME REMAINING</span>
-            <strong id="timer">35:00</strong>
-        </div>
+            <div class="brand">
+                <h1>AI PROMPTING CHALLENGE</h1>
+                <p>Prompt Master</p>
+            </div>
 
-    </header>
+            <div class="timer-box">
+                <span>TIME REMAINING</span>
+                <strong id="timer">35:00</strong>
+            </div>
 
-
-    <!-- ================= START SCREEN ================= -->
-    <main id="setupScreen" class="screen">
-
-        <div class="welcome">
-
-            <h2>Ready to Begin?</h2>
-
-            <p>
-                Test your ability to communicate with AI,
-                analyze information and solve real-world problems
-                through effective prompting.
-            </p>
-
-        </div>
+        </header>
 
 
-        <!-- ROUND INFORMATION -->
-        <div class="rules">
+        <!-- ================= START SCREEN ================= -->
 
-            <div>
-                <b>ROUND 1</b>
-                <span>Basic Prompting</span>
+        <main id="setupScreen" class="screen">
 
-                <small>
-                    0:00 – 5:00
-                    <br>
-                    5 Minutes
-                </small>
+            <div class="welcome">
+
+                <h2>Ready to Begin?</h2>
+
+                <p>
+                    Test your ability to communicate with AI,
+                    analyze information and solve real-world problems
+                    through effective prompting.
+                </p>
+
             </div>
 
 
-            <div>
-                <b>ROUND 2</b>
-                <span>Analyze & Extract</span>
+            <!-- ================= ROUND INFORMATION ================= -->
 
-                <small>
-                    5:00 – 15:00
-                    <br>
-                    10 Minutes
-                </small>
-            </div>
-
-
-            <div>
-                <b>ROUND 3</b>
-                <span>Real-World Problem Solving</span>
-
-                <small>
-                    15:00 – 35:00
-                    <br>
-                    20 Minutes
-                </small>
-            </div>
-
-        </div>
-
-
-        <!-- START BUTTON -->
-        <button id="startBtn" class="start-btn">
-            Start Challenge
-        </button>
-
-    </main>
-
-
-
-    <!-- ================= CHALLENGE SCREEN ================= -->
-    <main id="challengeScreen" class="screen hidden">
-
-        <!-- PROGRESS -->
-        <div class="progress-row">
-
-            <div>
-                <span id="roundLabel">ROUND 1</span>
-
-                <strong id="stageText">
-                    Basic Prompting
-                </strong>
-            </div>
-
-            <div class="question-progress">
-                Question <span id="questionNumber">1</span> of 3
-            </div>
-
-        </div>
-
-
-
-        <!-- QUESTION CARD -->
-        <section class="question-card">
-
-            <div class="question-header">
+            <div class="rules">
 
                 <div>
-                    <span id="roundBadge" class="badge">
-                        ROUND 1
-                    </span>
 
-                    <span id="roundType" class="badge secondary">
-                        Basic Prompting
-                    </span>
+                    <b>ROUND 1</b>
+
+                    <span>Basic Prompting</span>
+
+                    <small>
+                        0:00 – 5:00
+                        <br>
+                        5 Minutes
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <b>ROUND 2</b>
+
+                    <span>Analyze & Extract</span>
+
+                    <small>
+                        5:00 – 15:00
+                        <br>
+                        10 Minutes
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <b>ROUND 3</b>
+
+                    <span>Real-World Problem Solving</span>
+
+                    <small>
+                        15:00 – 35:00
+                        <br>
+                        20 Minutes
+                    </small>
+
                 </div>
 
             </div>
 
 
-            <h2 id="questionTitle">
-                Smart Energy Calculation
-            </h2>
+            <!-- ================= START BUTTON ================= -->
+
+            <button id="startBtn" class="start-btn">
+                Start Challenge
+            </button>
+
+        </main>
 
 
-            <p id="questionText" class="question-text"></p>
+
+        <!-- ================= CHALLENGE SCREEN ================= -->
+
+        <main id="challengeScreen" class="screen hidden">
+
+            <!-- Progress Row -->
+
+            <div class="progress-row">
+
+                <div>
+
+                    <span id="roundLabel">
+                        ROUND 1
+                    </span>
+
+                    <strong id="stageText">
+                        Basic Prompting
+                    </strong>
+
+                </div>
 
 
-            <!-- DATA BOX -->
-            <div class="data-box">
+                <div class="question-progress">
 
-                <h3>Given Information</h3>
+                    Question
+                    <span id="questionNumber">1</span>
+                    of 3
 
-                <p id="dataText"></p>
+                </div>
 
             </div>
 
 
-            <!-- TASK BOX -->
-            <div class="task-box">
 
-                <h3>Your Task</h3>
+            <!-- ================= QUESTION CARD ================= -->
 
-                <p id="taskText"></p>
+            <section class="question-card">
 
-            </div>
+                <div class="question-header">
+
+                    <div>
+
+                        <span id="roundBadge" class="badge">
+                            ROUND 1
+                        </span>
+
+                        <span id="roundType" class="badge secondary">
+                            Basic Prompting
+                        </span>
+
+                    </div>
+
+                </div>
 
 
-            <!-- TIP -->
-            <div class="tip">
+                <!-- Question Title -->
 
-                <strong>💡 Tip</strong>
+                <h2 id="questionTitle">
+                    Smart Energy Calculation
+                </h2>
+
+
+                <!-- Main Question -->
+
+                <p id="questionText" class="question-text">
+                </p>
+
+
+
+                <!-- ================= DATA BOX ================= -->
+
+                <div class="data-box">
+
+                    <h3>
+                        Given Information
+                    </h3>
+
+                    <p id="dataText">
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= TASK BOX ================= -->
+
+                <div class="task-box">
+
+                    <h3>
+                        Your Task
+                    </h3>
+
+                    <p id="taskText">
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= TIP ================= -->
+
+                <div class="tip">
+
+                    <strong>
+                        💡 Tip
+                    </strong>
+
+                    <span>
+                        Create one clear and well-structured prompt.
+                        Focus on giving AI enough context and specific instructions.
+                    </span>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <!-- ================= FINISHED SCREEN ================= -->
+
+        <main id="finishedScreen" class="screen hidden">
+
+            <div class="finished-card">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+
+                <h2>
+                    Challenge Completed!
+                </h2>
+
+
+                <p>
+                    🎯 All the Best!
+                </p>
+
 
                 <span>
-                    Create one clear and well-structured prompt.
-                    Focus on giving AI enough context and specific instructions.
+                    Please wait for the results.
                 </span>
 
-            </div>
-
-        </section>
-
-    </main>
 
 
+                <!-- ================= ORGANIZERS ================= -->
 
-    <!-- ================= FINISHED SCREEN ================= -->
-    <main id="finishedScreen" class="screen hidden">
+                <div class="organizers">
 
-        <div class="finished-card">
+                    <p>
+                        Organized by
+                    </p>
 
-            <div class="success-icon">
-                ✓
-            </div>
+                    <strong>
+                        Deepak L
+                    </strong>
 
-            <h2>Challenge Completed!</h2>
+                    <span>
+                        Prompt Master Organizing Team
+                    </span>
 
-            <p>🎯 All the Best!</p>
-
-            <span>
-                Please wait for the results.
-            </span>
-
-
-            <div class="organizers">
-
-                <p>Organized by</p>
-
-                <strong>Deepak L</strong>
-
-                <span>Prompt Master Organizing Team</span>
+                </div>
 
             </div>
 
-        </div>
-
-    </main>
+        </main>
 
 
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
+        <!-- ================= FOOTER ================= -->
 
-        <p>
-            AI Prompting Challenge • Prompt Master
-        </p>
+        <footer>
 
-    </footer>
+            <p>
+                AI Prompting Challenge • Prompt Master
+            </p>
 
-</div>
+        </footer>
+
+    </div>
 
 
-<script src="script.js"></script>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
+```
