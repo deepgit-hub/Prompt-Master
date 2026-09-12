@@ -37,56 +37,35 @@ const questions = [
     /* =====================================================
        ROUND 1
        ===================================================== */
+{
+    round: "ROUND 1",
 
-    {
-        round: "ROUND 1",
+    stage: "Basic Prompting",
 
-        stage: "Basic Prompting",
+    type: "Basic Prompting",
 
-        type: "Basic Prompting",
+    title: "Smart Energy Calculation",
 
-        title: "Smart Energy Calculation",
+    question:
+        "A college lab has 20 computers. Each uses 100 watts and runs 8 hours a day for 25 days. Electricity costs ₹8 per kWh.",
 
-        question:
-            "A college computer lab wants to understand its monthly electricity consumption and cost. Create one well-structured prompt that instructs an AI to perform the complete calculation accurately.",
+    data:
+`Given:
 
-        data:
-`The college computer lab has:
+• 20 computers
+• 100 watts per computer
+• 8 hours per day
+• 25 days per month
+• Electricity cost: ₹8 per kWh`,
 
-• 30 computers
-• Each computer consumes an average of 120 watts
-• Computers operate 8 hours per day
-• Lab operates 26 days per month
+    task:
+`Create ONE prompt asking AI to:
 
-Lighting:
-
-• 10 LED lights
-• Each light consumes 20 watts
-• Lights operate 8 hours per day
-
-Fans:
-
-• 4 ceiling fans
-• Each fan consumes 75 watts
-• Fans operate 6 hours per day
-
-Electricity cost:
-
-• ₹8.50 per kWh`,
-
-        task:
-`Create ONE well-structured prompt asking the AI to:
-
-1. Calculate the monthly electricity consumption of the computers.
-2. Calculate the monthly electricity consumption of the lights.
-3. Calculate the monthly electricity consumption of the fans.
-4. Calculate the total monthly electricity consumption.
-5. Calculate the total monthly electricity cost.
-6. Present all results in a clear table.
-7. State the formulas and assumptions used.
-
-Your prompt should provide all necessary information clearly and should instruct the AI to show the calculations.`
-    },
+1. Calculate monthly electricity consumption.
+2. Calculate monthly electricity cost.
+3. Show the calculation clearly.
+4. Present the final answer in a simple table.`
+},
 
 
     /* =====================================================
