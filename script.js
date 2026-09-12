@@ -112,63 +112,23 @@ Fathima: Programming 97, Mathematics 68, Cybersecurity 93, Attendance 86%`,
        ===================================================== */
 
     {
-        round: "ROUND 3",
+    round: "ROUND 3",
 
-        stage: "Real-World Problem Solving",
+    stage: "Real-World Problem Solving",
 
-        type: "Real-World Problem Solving",
+    type: "Real-World Problem Solving",
 
-        title: "India's Cyber Fraud Challenge",
+    title: "India's Cyber Fraud Challenge",
 
-        question:
-            "India is facing increasing digital fraud affecting ordinary citizens. Your task is to design a practical nationwide solution using AI and modern technology. Create one advanced prompt that instructs an AI to develop this solution.",
+    question:
+        "India is facing increasing online fraud through UPI scams, phishing, fake websites, OTP fraud, fake customer-care numbers and AI-generated scam messages. Design a practical nationwide solution to protect ordinary citizens.",
 
-        data:
-`India is facing increasing digital fraud involving:
+    data:
+`The solution should work across rural and urban India and consider citizens with different levels of digital awareness. It should use modern technology such as AI, mobile apps, automated alerts and fraud detection while remaining affordable and scalable.`,
 
-• Phishing attacks
-• Fake websites
-• OTP scams
-• UPI fraud
-• Fake customer-care numbers
-• Social engineering
-• AI-generated scam messages
-• Impersonation scams
-
-The solution should be practical for ordinary citizens and should work at a nationwide scale across different communities.`,
-
-        task:
-`Create ONE advanced prompt instructing the AI to:
-
-1. Analyze the major causes of digital fraud in India.
-2. Identify at least four vulnerable groups and explain why each group is vulnerable.
-3. Design a nationwide cybersecurity-awareness and fraud-prevention system.
-4. Explain how AI and Machine Learning can be used.
-5. Explain the role of mobile applications.
-6. Explain automated fraud alerts.
-7. Explain browser protection mechanisms.
-8. Explain fraud detection systems.
-9. Explain implementation across schools, colleges, banks and government institutions.
-10. Include both rural and urban communities.
-11. Design a low-cost approach that can operate at national scale.
-12. Define measurable KPIs including:
-    • Fraud reduction
-    • Number of people trained
-    • Fraud response time
-    • Awareness improvement
-    • Fraud detection rate
-13. Identify privacy risks.
-14. Identify implementation challenges.
-15. Explain possible misuse of the proposed technology.
-16. Create a three-phase implementation plan:
-    • Phase 1: 0–6 months
-    • Phase 2: 6–18 months
-    • Phase 3: 18–36 months
-17. End with the three most important actions that should be taken immediately.
-
-The AI should provide practical, realistic and scalable recommendations rather than only general awareness advice.`
-    }
-
+    task:
+`Create ONE advanced prompt that asks AI to design the solution, identify vulnerable groups, explain the role of technology, suggest implementation through banks, schools, colleges and government institutions, define measurable results, discuss privacy and implementation challenges, and provide a realistic 3-phase plan for 0–6 months, 6–18 months and 18–36 months. End with the 3 most important actions that should be taken immediately.`
+}
 ];
 
 
