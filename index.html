@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +19,20 @@
         <header class="header">
 
             <div class="brand">
+
                 <h1>AI PROMPTING CHALLENGE</h1>
+
                 <p>Prompt Master</p>
+
             </div>
 
+
             <div class="timer-box">
+
                 <span>TIME REMAINING</span>
+
                 <strong id="timer">35:00</strong>
+
             </div>
 
         </header>
@@ -36,7 +42,7 @@
 
         <main id="setupScreen" class="screen">
 
-            <div class="welcome">
+            <section class="welcome">
 
                 <h2>Ready to Begin?</h2>
 
@@ -46,14 +52,14 @@
                     through effective prompting.
                 </p>
 
-            </div>
+            </section>
 
 
-            <!-- ================= ROUND INFORMATION ================= -->
+            <!-- ================= ROUND CARDS ================= -->
 
-            <div class="rules">
+            <section class="rules">
 
-                <div>
+                <div class="round-card">
 
                     <b>ROUND 1</b>
 
@@ -68,11 +74,11 @@
                 </div>
 
 
-                <div>
+                <div class="round-card">
 
                     <b>ROUND 2</b>
 
-                    <span>Analyze & Extract</span>
+                    <span>Analyze &amp; Extract</span>
 
                     <small>
                         5:00 – 15:00
@@ -83,7 +89,7 @@
                 </div>
 
 
-                <div>
+                <div class="round-card">
 
                     <b>ROUND 3</b>
 
@@ -97,7 +103,7 @@
 
                 </div>
 
-            </div>
+            </section>
 
 
             <!-- ================= START BUTTON ================= -->
@@ -109,16 +115,15 @@
         </main>
 
 
-
         <!-- ================= CHALLENGE SCREEN ================= -->
 
         <main id="challengeScreen" class="screen hidden">
 
-            <!-- Progress Row -->
+            <!-- ================= PROGRESS ROW ================= -->
 
             <div class="progress-row">
 
-                <div>
+                <div class="progress-info">
 
                     <span id="roundLabel">
                         ROUND 1
@@ -142,7 +147,6 @@
             </div>
 
 
-
             <!-- ================= QUESTION CARD ================= -->
 
             <section class="question-card">
@@ -164,57 +168,42 @@
                 </div>
 
 
-                <!-- Question Title -->
-
                 <h2 id="questionTitle">
                     Smart Energy Calculation
                 </h2>
 
 
-                <!-- Main Question -->
-
                 <p id="questionText" class="question-text">
                 </p>
 
 
-
-                <!-- ================= DATA BOX ================= -->
+                <!-- ================= GIVEN INFORMATION ================= -->
 
                 <div class="data-box">
 
-                    <h3>
-                        Given Information
-                    </h3>
+                    <h3>Given Information</h3>
 
-                    <p id="dataText">
-                    </p>
+                    <p id="dataText"></p>
 
                 </div>
 
 
-
-                <!-- ================= TASK BOX ================= -->
+                <!-- ================= TASK ================= -->
 
                 <div class="task-box">
 
-                    <h3>
-                        Your Task
-                    </h3>
+                    <h3>Your Task</h3>
 
-                    <p id="taskText">
-                    </p>
+                    <p id="taskText"></p>
 
                 </div>
-
 
 
                 <!-- ================= TIP ================= -->
 
                 <div class="tip">
 
-                    <strong>
-                        💡 Tip
-                    </strong>
+                    <strong>💡 Tip</strong>
 
                     <span>
                         Create one clear and well-structured prompt.
@@ -228,12 +217,11 @@
         </main>
 
 
-
         <!-- ================= FINISHED SCREEN ================= -->
 
         <main id="finishedScreen" class="screen hidden">
 
-            <div class="finished-card">
+            <section class="finished-card">
 
                 <div class="success-icon">
                     ✓
@@ -255,9 +243,6 @@
                 </span>
 
 
-
-                <!-- ================= ORGANIZERS ================= -->
-
                 <div class="organizers">
 
                     <p>
@@ -274,10 +259,9 @@
 
                 </div>
 
-            </div>
+            </section>
 
         </main>
-
 
 
         <!-- ================= FOOTER ================= -->
@@ -293,7 +277,6 @@
     </div>
 
 
-
     <!-- ================= JAVASCRIPT ================= -->
 
     <script src="script.js"></script>
@@ -301,4 +284,3 @@
 </body>
 
 </html>
-```
