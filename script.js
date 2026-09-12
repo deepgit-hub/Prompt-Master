@@ -73,70 +73,38 @@ const questions = [
        ===================================================== */
 
     {
-        round: "ROUND 2",
+    round: "ROUND 2",
 
-        stage: "Analyze & Extract",
+    stage: "Analyze & Extract",
 
-        type: "Analyze & Extract",
+    type: "Analyze & Extract",
 
-        title: "Student Performance Investigation",
+    title: "Student Performance Analysis",
 
-        question:
-            "A college wants to analyze the academic performance and attendance of six students. Create one advanced prompt that instructs an AI to analyze the supplied data and produce meaningful conclusions.",
+    question:
+        "Analyze the following student data and create ONE prompt that instructs AI to find patterns, rankings, and important information.",
 
-        data:
-`Student Performance Data:
+    data:
+`Arun: Programming 86, Mathematics 72, Cybersecurity 91, Attendance 88%
+Bala: Programming 94, Mathematics 81, Cybersecurity 76, Attendance 92%
+Charan: Programming 78, Mathematics 95, Cybersecurity 89, Attendance 84%
+Divya: Programming 91, Mathematics 88, Cybersecurity 94, Attendance 96%
+Ezhil: Programming 83, Mathematics 79, Cybersecurity 82, Attendance 90%
+Fathima: Programming 97, Mathematics 68, Cybersecurity 93, Attendance 86%`,
 
-Arun:
-Programming: 86
-Mathematics: 72
-Cybersecurity: 91
-Attendance: 88%
+    task:
+`Create ONE prompt asking AI to:
 
-Bala:
-Programming: 94
-Mathematics: 81
-Cybersecurity: 76
-Attendance: 92%
-
-Charan:
-Programming: 78
-Mathematics: 95
-Cybersecurity: 89
-Attendance: 84%
-
-Divya:
-Programming: 91
-Mathematics: 88
-Cybersecurity: 94
-Attendance: 96%
-
-Ezhil:
-Programming: 83
-Mathematics: 79
-Cybersecurity: 82
-Attendance: 90%
-
-Fathima:
-Programming: 97
-Mathematics: 68
-Cybersecurity: 93
-Attendance: 86%`,
-
-        task:
-`Create ONE prompt that asks the AI to:
-
-1. Calculate every student's average academic score using Programming, Mathematics and Cybersecurity.
-2. Identify the top 3 students based on average academic score.
-3. Identify the student with the highest attendance.
-4. Identify all students whose attendance is below 90%.
-5. Identify the student with the highest Cybersecurity score.
-6. Determine whether the student with the highest academic average also has the highest attendance.
-7. Rank every student from highest to lowest average score.
-8. Present the results in a structured table.
-9. Explain the major conclusions in no more than 100 words.
-10. Use ONLY the supplied information and do not invent or assume missing information.`
-    },
+1. Calculate each student's average score.
+2. Find the top 3 students.
+3. Find the highest attendance.
+4. Find students below 90% attendance.
+5. Find the highest Cybersecurity score.
+6. Rank all students by average score.
+7. Show the results in a table.
+8. Give conclusions in under 100 words.
+9. Use ONLY the given information.`
+},
 
 
     /* =====================================================
