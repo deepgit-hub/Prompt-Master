@@ -1,21 +1,20 @@
 /* =========================================================
-   PROMPT MASTER – AI PROMPTING CHALLENGE
+   PROMPT MASTER
+   AI PROMPTING CHALLENGE
    ========================================================= */
-
-
-/*
-    ROUND TIMINGS
-
-    ROUND 1 → 00:00
-    ROUND 2 → 05:00
-    ROUND 3 → 15:00
-    END     → 35:00
-*/
 
 
 /* =========================================================
-   TOTAL EVENT TIME
+   EVENT TIMING
+   =========================================================
+
+   ROUND 1 → 00:00 to 05:00
+   ROUND 2 → 05:00 to 15:00
+   ROUND 3 → 15:00 to 35:00
+
+   TOTAL → 35 MINUTES
    ========================================================= */
+
 
 const TOTAL_SECONDS = 35 * 60;
 
@@ -25,6 +24,7 @@ const TOTAL_SECONDS = 35 * 60;
    ========================================================= */
 
 let elapsed = 0;
+
 let timerInterval = null;
 
 
@@ -40,7 +40,9 @@ const questions = [
 
     {
         round: "ROUND 1",
+
         stage: "Basic Prompting",
+
         type: "Basic Prompting",
 
         title: "Smart Energy Calculation",
@@ -49,7 +51,7 @@ const questions = [
             "A college computer lab wants to understand its monthly electricity consumption and cost. Create one well-structured prompt that instructs an AI to perform the complete calculation accurately.",
 
         data:
-            `The college computer lab has:
+`The college computer lab has:
 
 • 30 computers
 • Each computer consumes an average of 120 watts
@@ -73,7 +75,7 @@ Electricity cost:
 • ₹8.50 per kWh`,
 
         task:
-            `Create ONE well-structured prompt asking the AI to:
+`Create ONE well-structured prompt asking the AI to:
 
 1. Calculate the monthly electricity consumption of the computers.
 2. Calculate the monthly electricity consumption of the lights.
@@ -84,7 +86,6 @@ Electricity cost:
 7. State the formulas and assumptions used.
 
 Your prompt should provide all necessary information clearly and should instruct the AI to show the calculations.`
-
     },
 
 
@@ -94,7 +95,9 @@ Your prompt should provide all necessary information clearly and should instruct
 
     {
         round: "ROUND 2",
+
         stage: "Analyze & Extract",
+
         type: "Analyze & Extract",
 
         title: "Student Performance Investigation",
@@ -103,7 +106,7 @@ Your prompt should provide all necessary information clearly and should instruct
             "A college wants to analyze the academic performance and attendance of six students. Create one advanced prompt that instructs an AI to analyze the supplied data and produce meaningful conclusions.",
 
         data:
-            `Student Performance Data:
+`Student Performance Data:
 
 Arun:
 Programming: 86
@@ -142,7 +145,7 @@ Cybersecurity: 93
 Attendance: 86%`,
 
         task:
-            `Create ONE prompt that asks the AI to:
+`Create ONE prompt that asks the AI to:
 
 1. Calculate every student's average academic score using Programming, Mathematics and Cybersecurity.
 2. Identify the top 3 students based on average academic score.
@@ -154,7 +157,6 @@ Attendance: 86%`,
 8. Present the results in a structured table.
 9. Explain the major conclusions in no more than 100 words.
 10. Use ONLY the supplied information and do not invent or assume missing information.`
-
     },
 
 
@@ -164,7 +166,9 @@ Attendance: 86%`,
 
     {
         round: "ROUND 3",
+
         stage: "Real-World Problem Solving",
+
         type: "Real-World Problem Solving",
 
         title: "India's Cyber Fraud Challenge",
@@ -173,7 +177,7 @@ Attendance: 86%`,
             "India is facing increasing digital fraud affecting ordinary citizens. Your task is to design a practical nationwide solution using AI and modern technology. Create one advanced prompt that instructs an AI to develop this solution.",
 
         data:
-            `India is facing increasing digital fraud involving:
+`India is facing increasing digital fraud involving:
 
 • Phishing attacks
 • Fake websites
@@ -187,7 +191,7 @@ Attendance: 86%`,
 The solution should be practical for ordinary citizens and should work at a nationwide scale across different communities.`,
 
         task:
-            `Create ONE advanced prompt instructing the AI to:
+`Create ONE advanced prompt instructing the AI to:
 
 1. Analyze the major causes of digital fraud in India.
 2. Identify at least four vulnerable groups and explain why each group is vulnerable.
@@ -216,7 +220,6 @@ The solution should be practical for ordinary citizens and should work at a nati
 17. End with the three most important actions that should be taken immediately.
 
 The AI should provide practical, realistic and scalable recommendations rather than only general awareness advice.`
-
     }
 
 ];
@@ -232,7 +235,7 @@ function get(id) {
 
 
 /* =========================================================
-   FORMAT TIME
+   FORMAT TIMER
    ========================================================= */
 
 function formatTime(seconds) {
@@ -255,29 +258,37 @@ function formatTime(seconds) {
 
 function startChallenge() {
 
-    /* Reset timer */
+    /* Reset elapsed time */
     elapsed = 0;
 
-    /* Update timer display */
+
+    /* Clear previous timer if any */
+    clearInterval(timerInterval);
+
+
+    /* Set timer to 35 minutes */
     get("timer").textContent = formatTime(TOTAL_SECONDS);
 
-    /* Hide setup screen */
+
+    /* Hide start screen */
     get("setupScreen").classList.add("hidden");
+
 
     /* Show challenge screen */
     get("challengeScreen").classList.remove("hidden");
 
-    /* Hide finished screen if necessary */
+
+    /* Hide finished screen */
     get("finishedScreen").classList.add("hidden");
 
-    /* Start with Round 1 */
+
+    /* Show Round 1 */
     showQuestion(0);
 
-    /* Clear any previous timer */
-    clearInterval(timerInterval);
 
-    /* Start timer */
+    /* Start countdown */
     timerInterval = setInterval(updateTimer, 1000);
+
 }
 
 
@@ -289,9 +300,14 @@ function updateTimer() {
 
     elapsed++;
 
+
     const remaining = TOTAL_SECONDS - elapsed;
 
-    /* Prevent negative timer */
+
+    /* =========================
+       EVENT FINISHED
+       ========================= */
+
     if (remaining <= 0) {
 
         get("timer").textContent = "00:00";
@@ -302,13 +318,19 @@ function updateTimer() {
     }
 
 
-    /* Update timer */
+    /* =========================
+       UPDATE TIMER DISPLAY
+       ========================= */
+
     get("timer").textContent = formatTime(remaining);
 
 
-    /* =====================================================
-       ROUND 2 STARTS AT 5 MINUTES
-       ===================================================== */
+    /* =========================
+       ROUND 2
+       =========================
+
+       Starts after 5 minutes.
+    */
 
     if (elapsed === 5 * 60) {
 
@@ -317,9 +339,12 @@ function updateTimer() {
     }
 
 
-    /* =====================================================
-       ROUND 3 STARTS AT 15 MINUTES
-       ===================================================== */
+    /* =========================
+       ROUND 3
+       =========================
+
+       Starts after 15 minutes.
+    */
 
     if (elapsed === 15 * 60) {
 
@@ -338,48 +363,74 @@ function showQuestion(index) {
 
     const question = questions[index];
 
+
     if (!question) {
         return;
     }
 
 
-    /* Round information */
+    /* =========================
+       ROUND INFORMATION
+       ========================= */
 
-    get("roundLabel").textContent = question.round;
-
-    get("stageText").textContent = question.stage;
-
-
-    /* Badges */
-
-    get("roundBadge").textContent = question.round;
-
-    get("roundType").textContent = question.type;
+    get("roundLabel").textContent =
+        question.round;
 
 
-    /* Question number */
-
-    get("questionNumber").textContent = index + 1;
-
-
-    /* Question title */
-
-    get("questionTitle").textContent = question.title;
+    get("stageText").textContent =
+        question.stage;
 
 
-    /* Main question */
+    /* =========================
+       BADGES
+       ========================= */
 
-    get("questionText").textContent = question.question;
-
-
-    /* Given information */
-
-    get("dataText").textContent = question.data;
+    get("roundBadge").textContent =
+        question.round;
 
 
-    /* Task */
+    get("roundType").textContent =
+        question.type;
 
-    get("taskText").textContent = question.task;
+
+    /* =========================
+       QUESTION NUMBER
+       ========================= */
+
+    get("questionNumber").textContent =
+        index + 1;
+
+
+    /* =========================
+       TITLE
+       ========================= */
+
+    get("questionTitle").textContent =
+        question.title;
+
+
+    /* =========================
+       QUESTION
+       ========================= */
+
+    get("questionText").textContent =
+        question.question;
+
+
+    /* =========================
+       DATA
+       ========================= */
+
+    get("dataText").textContent =
+        question.data;
+
+
+    /* =========================
+       TASK
+       ========================= */
+
+    get("taskText").textContent =
+        question.task;
 
 }
 
@@ -404,14 +455,17 @@ function finishChallenge() {
     get("challengeScreen").classList.add("hidden");
 
 
-    /* Show finished screen */
+    /* Show completed screen */
     get("finishedScreen").classList.remove("hidden");
 
 }
 
 
 /* =========================================================
-   START BUTTON EVENT
+   START BUTTON
    ========================================================= */
 
-get("startBtn").addEventListener("click", startChallenge);
+get("startBtn").addEventListener(
+    "click",
+    startChallenge
+);
