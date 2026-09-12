@@ -95,14 +95,10 @@ Fathima: Programming 97, Mathematics 68, Cybersecurity 93, Attendance 86%`,
     task:
 `Create ONE prompt asking AI to:
 
-1. Calculate each student's average score.
-2. Find the top 3 students.
-3. Find the highest attendance.
-4. Find students below 90% attendance.
-5. Find the highest Cybersecurity score.
-6. Rank all students by average score.
-7. Show the results in a table.
-8. Give conclusions in under 100 words.
+1. Calculate each student's average score. 2. Find the top 3 students
+3. Find the highest attendance. 4. Find students below 90% attendance.
+5. Find the highest Cybersecurity score. 6. Rank all students by average score.
+7. Show the results in a table. 8. Give conclusions in under 100 words.
 9. Use ONLY the given information.`
 },
 
